@@ -285,4 +285,9 @@ footer h2{
     width: 60%;
     padding-top: 1.5rem;
   }
+  .end-link-div li:hover,
+  .others li:hover,
+  .lorem li:hover{
+    color: #fff;
+  }
 }
