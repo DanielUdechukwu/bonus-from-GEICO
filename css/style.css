@@ -216,6 +216,11 @@ footer h2{
   list-style-type: none;
   padding: .4rem 0;
 }
+.end-link-div li:hover,
+.others li:hover,
+.lorem li:hover{
+  color: #fff;
+}
 
 /* MEDIA QUERIES */
 @media (max-width: 480px){
@@ -285,9 +290,5 @@ footer h2{
     width: 60%;
     padding-top: 1.5rem;
   }
-  .end-link-div li:hover,
-  .others li:hover,
-  .lorem li:hover{
-    color: #fff;
-  }
+  
 }
