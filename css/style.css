@@ -3,6 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+body{
+  position: relative;
+}
 a{
   text-decoration: none;
   color: #9498a2;
@@ -159,6 +162,7 @@ header{
   width: 55%;
   background: #3b4050;
   margin: 0 0 0 11rem;
+  padding: 1rem;
 }
 .content-box h4{
   font-size: 30px;
@@ -173,9 +177,6 @@ header{
   padding: 0 2rem 1.5rem 2rem;
   text-align: center;
   color: #fff;
-}
-.empty{
-  padding-top: 2.5rem;
 }
 
 /* FOOTER */
@@ -222,8 +223,101 @@ footer h2{
   color: #fff;
 }
 
+.hamburger{
+  display: none;
+  cursor: pointer;
+}
+.bar{
+  display: block;
+  width: 30px;
+  height: 5px;
+  border-radius: 5px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background: #fff;
+}
+
+@media (max-width: 780px){
+  .nav-items h2{
+    width: 20%;
+  }
+  .nav-items{
+    justify-content: flex-start;
+  }
+  .links-main{
+    width: 100%;
+    justify-content: flex-end;
+  }
+  .hero-text{
+    width: 60%;
+  }
+  .hero-text h2{
+    font-size: 70px;
+  }
+  .hero-description{
+    margin-top: 12rem;
+  }
+  .about{
+    width: 90%;
+  }
+  .content-main{
+    width: 100%;
+  }
+  .content-major{
+    flex-direction: column;
+  }
+  .content-main img{
+    width: 100%;
+    margin-top: 1rem;
+  }
+  .content-sub{
+    display: flex;
+    gap: .5rem;
+  }
+  .content-box{
+    margin: 0 0 0 0;
+  }
+  .content-box p{
+    padding: 0 0 0 0;
+  }
+  .content-box h4{
+    font-size: 25px;
+  }
+  .content-main h2{
+    text-align: center;
+  }
+}
+
+
 /* MEDIA QUERIES */
 @media (max-width: 480px){
+  .hamburger{
+    display: block;
+    width: 30%;
+    position: absolute;
+    top: 1.45rem;
+    right: 0;
+  }
+  .hamburger.active .bar:nth-child(2){
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  .links-main{
+    position: fixed;
+    left: -100%;
+  }
+  /* .nav-items{
+    justify-content: space-between;
+  } */
+
+
+
   .links,
   .register{
     display: none;
@@ -269,6 +363,12 @@ footer h2{
   .content-box{
     width: 90%;
     margin: 0 auto;
+  }
+  .content-box p{
+    padding-bottom: 2rem ;
+  }
+  .content-sub{
+    flex-direction: column;
   }
   footer h2{
     text-align: start;
