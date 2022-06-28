@@ -311,6 +311,15 @@ footer h2{
   .links-main{
     position: fixed;
     left: -100%;
+    top: 70px;
+    gap: 0;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+  }
+  .links-main:active{
+    left: 0;
   }
   /* .nav-items{
     justify-content: space-between;
